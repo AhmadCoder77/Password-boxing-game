@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Boxing Match 🥊</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Password Boxing Match 🥊</h1>
+
+  <div class="names">
+    <input type="text" id="nameA" placeholder="Enter Fighter A's name" />
+    <input type="text" id="nameB" placeholder="Enter Fighter B's name" />
+  </div>
+
+  <div class="boxers">
+    <div class="boxer">
+      <h2 id="labelA">Fighter A</h2>
+      <input type="password" id="passwordA" placeholder="Enter password" />
+    </div>
+    <div class="boxer">
+      <h2 id="labelB">Fighter B</h2>
+      <input type="password" id="passwordB" placeholder="Enter password" />
+    </div>
+  </div>
+
+  <button id="actionButton" onclick="handleRound()">Submit Round</button>
+  <div id="timer"></div>
+  <div id="result"></div>
+
+  <div class="scoreboard">
+    <h3>Round <span id="roundNum">1</span> / 10</h3>
+    <p><span id="scoreNameA">Fighter A</span>: <span id="scoreA">0</span></p>
+    <p><span id="scoreNameB">Fighter B</span>: <span id="scoreB">0</span></p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
