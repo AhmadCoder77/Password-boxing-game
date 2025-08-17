@@ -34,7 +34,7 @@ function handleRound() {
 
     document.getElementById('passwordA').value = '';
     document.getElementById('passwordB').value = '';
-    result.textContent = `⏱ ${nameA}'s turn to repeat (7 seconds)`;
+    result.textContent = `⏱ ${nameA}'s turn to repeat (10 seconds)`;
     stage = 2;
     actionBtn.disabled = true;
     startTimer('A');
@@ -44,7 +44,7 @@ function handleRound() {
     document.getElementById('passwordA').value = '';
     document.getElementById('passwordB').value = '';
     stage = 3;
-    result.textContent = `⏱ ${nameB}'s turn to repeat (7 seconds)`;
+    result.textContent = `⏱ ${nameB}'s turn to repeat (10 seconds)`;
     startTimer('B');
 
   } else if (stage === 3.5) {
@@ -55,7 +55,7 @@ function handleRound() {
 }
 
 function startTimer(player) {
-  let sec = 7;
+  let sec = 10;
   const timerEl = document.getElementById('timer');
   const inputId = player === 'A' ? 'passwordA' : 'passwordB';
   const result = document.getElementById('result');
